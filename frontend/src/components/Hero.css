@@ -1,0 +1,206 @@
+/* ── Hero ────────────────────────────────────────────────────── */
+.hero {
+  width: 100%;
+  background: linear-gradient(
+    160deg,
+    var(--color-bg) 0%,
+    var(--color-bg-alt) 50%,
+    var(--color-bg) 100%
+  );
+  padding: var(--space-10) 0 var(--space-6);
+  transition: background var(--transition-slow);
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: 380px;
+}
+
+/* ── Left column ── */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  z-index: 1;
+}
+
+.hero__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.hero__heading {
+  font-size: clamp(var(--font-size-3xl), 4.5vw, var(--font-size-5xl));
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--color-text-primary);
+  letter-spacing: -0.025em;
+}
+
+.hero__heading-accent {
+  color: var(--color-accent);
+}
+
+.hero__subtext {
+  font-size: clamp(var(--font-size-sm), 1.5vw, var(--font-size-base));
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 48ch;
+}
+
+/* ── Right column ── */
+.hero__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero__brain-image {
+  display: block;
+  width: 200%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  transform: translateX(-30%);
+  filter: drop-shadow(0 8px 24px rgba(37, 99, 235, 0.12));
+}
+
+/* ── Responsive — Tablet 768–1024px ── */
+@media (max-width: 1024px) {
+  .hero__inner {
+    gap: var(--space-6);
+    min-height: 320px;
+  }
+
+  .hero__heading {
+    font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+  }
+}
+
+/* ── Responsive — Mobile ≤768px ── */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-8) 0 var(--space-5);
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    text-align: left;
+    min-height: unset;
+  }
+
+  /* Brain visual appears between heading/eyebrow and features */
+  .hero__visual {
+    order: 2;
+    max-height: 280px;
+    overflow: hidden;
+  }
+
+  .hero__brain-image {
+    max-width: 420px;
+  }
+
+  .hero__content {
+    order: 1;
+    gap: var(--space-4);
+  }
+
+  /* Move features below visual on mobile */
+  .hero__content > :last-child {
+    order: 3;
+  }
+
+  .hero__heading {
+    font-size: clamp(var(--font-size-2xl), 6vw, var(--font-size-3xl));
+  }
+
+  .hero__subtext {
+    font-size: var(--font-size-sm);
+    max-width: 100%;
+  }
+}
+
+/* ── Responsive — Small mobile ≤425px ── */
+@media (max-width: 425px) {
+  .hero {
+    padding: var(--space-6) 0 var(--space-4);
+  }
+
+  .hero__inner {
+    gap: var(--space-4);
+  }
+
+  .hero__visual {
+    max-height: 240px;
+  }
+
+  .hero__brain-image {
+    max-width: 340px;
+  }
+
+  .hero__heading {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero__eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* ── Responsive — 375px ── */
+@media (max-width: 375px) {
+  .hero__inner {
+    gap: var(--space-3);
+  }
+
+  .hero__heading {
+    font-size: var(--font-size-xl);
+    line-height: 1.2;
+  }
+
+  .hero__visual {
+    max-height: 200px;
+  }
+
+  .hero__brain-image {
+    max-width: 280px;
+  }
+}
+
+/* ── Responsive — 320px ── */
+@media (max-width: 320px) {
+  .hero__heading {
+    font-size: 1.15rem;
+  }
+
+  .hero__subtext {
+    font-size: 0.8rem;
+  }
+}
+
+/* ── Responsive — Wide screens ≥1440px ── */
+@media (min-width: 1440px) {
+  .hero {
+    padding: var(--space-16) 0 var(--space-8);
+  }
+
+  .hero__inner {
+    min-height: 440px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero__inner {
+    min-height: 500px;
+  }
+}

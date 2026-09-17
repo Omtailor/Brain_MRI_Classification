@@ -1,0 +1,112 @@
+.error-card {
+  background-color: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  animation: fadeIn var(--transition-base) ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-card__icon {
+  color: #EF4444;
+  margin-bottom: var(--space-4);
+  display: flex;
+  justify-content: center;
+}
+
+.error-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.error-card__message {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-5);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-card__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.error-card__button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: all var(--transition-fast) ease;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.error-card__button--primary {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.error-card__button--primary:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.error-card__button--secondary {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.error-card__button--secondary:hover {
+  background-color: var(--color-border);
+}
+
+@media (max-width: 425px) {
+  .error-card {
+    padding: var(--space-5);
+  }
+
+  .error-card__title {
+    font-size: var(--font-size-base);
+  }
+
+  .error-card__message {
+    font-size: var(--font-size-xs);
+    max-width: 320px;
+  }
+
+  .error-card__button {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-xs);
+  }
+
+  .error-card__actions {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .error-card__button {
+    width: 100%;
+    justify-content: center;
+  }
+}

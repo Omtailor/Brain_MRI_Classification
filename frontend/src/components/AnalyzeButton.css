@@ -1,0 +1,57 @@
+/* ── AnalyzeButton ───────────────────────────────────────────── */
+.analyze-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 16px var(--space-6);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: none;
+  transition: background var(--transition-base), box-shadow var(--transition-base),
+              transform var(--transition-fast), color var(--transition-base);
+}
+
+.analyze-btn--disabled {
+  background: var(--color-border);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.analyze-btn--active {
+  background: var(--color-accent);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+}
+
+.analyze-btn--active:hover {
+  background: var(--color-accent-hover);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+}
+
+.analyze-btn--active:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.analyze-btn--loading {
+  background: var(--color-accent);
+  color: #fff;
+  cursor: wait;
+  opacity: 0.85;
+}
+
+.analyze-btn__icon {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.analyze-btn--active:hover .analyze-btn__icon {
+  transform: translateX(3px);
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="8" fill="#2563EB"/>
+  <!-- Simplified brain icon -->
+  <path d="M16 6C12.5 6 10 8.5 10 11.5C10 13 10.5 14.2 11.5 15C10.5 15.8 10 17 10 18.5C10 21.5 12.5 24 16 24C19.5 24 22 21.5 22 18.5C22 17 21.5 15.8 20.5 15C21.5 14.2 22 13 22 11.5C22 8.5 19.5 6 16 6Z"
+    fill="white" fill-opacity="0.9"/>
+  <path d="M13 11C13 11 14 13 16 13C18 13 19 11 19 11"
+    stroke="#DBEAFE" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M12 17C12 17 14 19 16 19C18 19 20 17 20 17"
+    stroke="#DBEAFE" stroke-width="1" stroke-linecap="round" fill="none"/>
+</svg>

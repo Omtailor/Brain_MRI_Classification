@@ -1,0 +1,48 @@
+.grad-cam-card {
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-card);
+}
+
+.grad-cam-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  color: var(--color-accent);
+}
+
+.grad-cam-card__header h3 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.grad-cam-card__image {
+  display: block;
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background-color: #0b1224;
+}
+
+.grad-cam-card__caption {
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
+@media (max-width: 425px) {
+  .grad-cam-card {
+    padding: var(--space-4);
+  }
+
+  .grad-cam-card__caption {
+    font-size: var(--font-size-xs);
+  }
+}

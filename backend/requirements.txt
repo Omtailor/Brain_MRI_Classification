@@ -1,0 +1,28 @@
+# Brain Tumor MRI Classification — Backend
+# Part 3: Final Analysis Pipeline
+
+# Web framework
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# Multipart form / file uploads
+python-multipart==0.0.12
+
+# ML / inference
+torch==2.11.0
+torchvision==0.26.0
+
+# Image handling
+Pillow==12.0.0
+
+# PDF image extraction
+pypdf==5.1.0
+
+# Gemini API
+google-genai==2.20.0
+
+# Configuration
+python-dotenv==1.0.1
+
+# Data validation
+pydantic==2.12.5

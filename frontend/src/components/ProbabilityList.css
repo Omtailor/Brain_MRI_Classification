@@ -1,0 +1,86 @@
+.probability-list {
+  margin-bottom: var(--space-6);
+}
+
+.probability-list__title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.probability-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.probability-item {
+  width: 100%;
+}
+
+.probability-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.probability-item__label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.probability-item__value {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.probability-item__track {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.probability-item__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent-light), var(--color-accent));
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow) ease;
+}
+
+@media (max-width: 425px) {
+  .probability-list__title {
+    font-size: var(--font-size-sm);
+  }
+
+  .probability-item__label {
+    font-size: var(--font-size-xs);
+  }
+
+  .probability-item__value {
+    font-size: var(--font-size-xs);
+  }
+
+  .probability-item__track {
+    height: 4px;
+  }
+}
+
+@media (max-width: 375px) {
+  .probability-list {
+    margin-bottom: var(--space-4);
+  }
+
+  .probability-list__title {
+    font-size: var(--font-size-xs);
+  }
+
+  .probability-item__track {
+    height: 3px;
+  }
+}
